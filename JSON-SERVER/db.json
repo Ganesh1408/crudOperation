@@ -1,0 +1,402 @@
+{
+  "invoices": [
+    {
+      "id": "1",
+      "date": "2025-01-01",
+      "customer": {
+        "customerId": 101,
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "address": "123 Elm St, Springfield, USA"
+      },
+      "items": [
+        {
+          "productId": 1,
+          "title": "Laptop",
+          "quantity": 1,
+          "price": 999.99,
+          "total": 999.99
+        },
+        {
+          "productId": 2,
+          "title": "Mouse",
+          "quantity": 2,
+          "price": 19.99,
+          "total": 39.98
+        }
+      ],
+      "totalAmount": 1039.97,
+      "status": "Paid"
+    },
+    {
+      "id": "2",
+      "date": "2025-01-02",
+      "customer": {
+        "customerId": 102,
+        "name": "Jane Smith",
+        "email": "janesmith@example.com",
+        "address": "456 Oak St, Rivertown, USA"
+      },
+      "items": [
+        {
+          "productId": 3,
+          "title": "Smartphone",
+          "quantity": 1,
+          "price": 599.99,
+          "total": 599.99
+        },
+        {
+          "productId": 4,
+          "title": "Headphones",
+          "quantity": 1,
+          "price": 49.99,
+          "total": 49.99
+        }
+      ],
+      "totalAmount": 649.98,
+      "status": "Pending"
+    },
+    {
+      "id": "3",
+      "date": "2025-01-03",
+      "customer": {
+        "customerId": 103,
+        "name": "Carlos Gomez",
+        "email": "carlosgomez@example.com",
+        "address": "789 Pine St, Lakeview, USA"
+      },
+      "items": [
+        {
+          "productId": 5,
+          "title": "Tablet",
+          "quantity": 2,
+          "price": 199.99,
+          "total": 399.98
+        }
+      ],
+      "totalAmount": 399.98,
+      "status": "Paid"
+    },
+    {
+      "id": "4",
+      "date": "2025-01-04",
+      "customer": {
+        "customerId": 104,
+        "name": "Michael Johnson",
+        "email": "michaeljohnson@example.com",
+        "address": "123 Maple St, Hilltown, USA"
+      },
+      "items": [
+        {
+          "productId": 6,
+          "title": "Keyboard",
+          "quantity": 1,
+          "price": 29.99,
+          "total": 29.99
+        }
+      ],
+      "totalAmount": 29.99,
+      "status": "Pending"
+    },
+    {
+      "id": "5",
+      "date": "2025-01-05",
+      "customer": {
+        "customerId": 105,
+        "name": "Sarah Lee",
+        "email": "sarahlee@example.com",
+        "address": "101 Birch St, Brookfield, USA"
+      },
+      "items": [
+        {
+          "productId": 7,
+          "title": "Monitor",
+          "quantity": 1,
+          "price": 249.99,
+          "total": 249.99
+        },
+        {
+          "productId": 8,
+          "title": "Cable",
+          "quantity": 3,
+          "price": 5.99,
+          "total": 17.97
+        }
+      ],
+      "totalAmount": 267.96,
+      "status": "Paid"
+    },
+    {
+      "id": "6",
+      "date": "2025-01-06",
+      "customer": {
+        "customerId": 106,
+        "name": "David Kim",
+        "email": "davidkim@example.com",
+        "address": "202 Cedar St, Sunnytown, USA"
+      },
+      "items": [
+        {
+          "productId": 9,
+          "title": "Speaker",
+          "quantity": 2,
+          "price": 89.99,
+          "total": 179.98
+        }
+      ],
+      "totalAmount": 179.98,
+      "status": "Paid"
+    },
+    {
+      "id": "7",
+      "date": "2025-01-07",
+      "customer": {
+        "customerId": 107,
+        "name": "Emily Davis",
+        "email": "emilydavis@example.com",
+        "address": "303 Willow St, Greenfield, USA"
+      },
+      "items": [
+        {
+          "productId": 10,
+          "title": "Smartwatch",
+          "quantity": 1,
+          "price": 159.99,
+          "total": 159.99
+        }
+      ],
+      "totalAmount": 159.99,
+      "status": "Pending"
+    },
+    {
+      "id": "8",
+      "date": "2025-01-08",
+      "customer": {
+        "customerId": 108,
+        "name": "Thomas Brown",
+        "email": "thomasbrown@example.com",
+        "address": "404 Birch St, Oakwood, USA"
+      },
+      "items": [
+        {
+          "productId": 11,
+          "title": "Monitor Stand",
+          "quantity": 1,
+          "price": 39.99,
+          "total": 39.99
+        }
+      ],
+      "totalAmount": 39.99,
+      "status": "Paid"
+    },
+    {
+      "id": "9",
+      "date": "2025-01-09",
+      "customer": {
+        "customerId": 109,
+        "name": "Rachel Green",
+        "email": "rachelgreen@example.com",
+        "address": "505 Elm St, Riverside, USA"
+      },
+      "items": [
+        {
+          "productId": 12,
+          "title": "USB Drive",
+          "quantity": 3,
+          "price": 14.99,
+          "total": 44.97
+        }
+      ],
+      "totalAmount": 44.97,
+      "status": "Pending"
+    },
+    {
+      "id": "10",
+      "date": "2025-01-10",
+      "customer": {
+        "customerId": 110,
+        "name": "Lisa White",
+        "email": "lisawhite@example.com",
+        "address": "606 Pine St, Clifftown, USA"
+      },
+      "items": [
+        {
+          "productId": 13,
+          "title": "Printer",
+          "quantity": 1,
+          "price": 149.99,
+          "total": 149.99
+        }
+      ],
+      "totalAmount": 149.99,
+      "status": "Paid"
+    },
+    {
+      "id": "11",
+      "date": "2025-01-11",
+      "customer": {
+        "customerId": 111,
+        "name": "John Black",
+        "email": "johnblack@example.com",
+        "address": "707 Cedar St, Maplewood, USA"
+      },
+      "items": [
+        {
+          "productId": 14,
+          "title": "Camera",
+          "quantity": 1,
+          "price": 399.99,
+          "total": 399.99
+        }
+      ],
+      "totalAmount": 399.99,
+      "status": "Pending"
+    },
+    {
+      "id": "12",
+      "date": "2025-01-12",
+      "customer": {
+        "customerId": 112,
+        "name": "Sophia Harris",
+        "email": "sophiaharris@example.com",
+        "address": "808 Oak St, Westfield, USA"
+      },
+      "items": [
+        {
+          "productId": 15,
+          "title": "Projector",
+          "quantity": 1,
+          "price": 499.99,
+          "total": 499.99
+        }
+      ],
+      "totalAmount": 499.99,
+      "status": "Paid"
+    },
+    {
+      "id": "13",
+      "date": "2025-01-13",
+      "customer": {
+        "customerId": 113,
+        "name": "Joshua King",
+        "email": "joshuaking@example.com",
+        "address": "909 Maple St, Brightview, USA"
+      },
+      "items": [
+        {
+          "productId": 16,
+          "title": "Charger",
+          "quantity": 2,
+          "price": 19.99,
+          "total": 39.98
+        }
+      ],
+      "totalAmount": 39.98,
+      "status": "Paid"
+    },
+    {
+      "id": "14",
+      "date": "2025-01-14",
+      "customer": {
+        "customerId": 114,
+        "name": "Olivia Scott",
+        "email": "oliviascott@example.com",
+        "address": "101 Pine St, Seaview, USA"
+      },
+      "items": [
+        {
+          "productId": 17,
+          "title": "Microphone",
+          "quantity": 1,
+          "price": 99.99,
+          "total": 99.99
+        }
+      ],
+      "totalAmount": 99.99,
+      "status": "Pending"
+    },
+    {
+      "id": "15",
+      "date": "2025-01-15",
+      "customer": {
+        "customerId": 115,
+        "name": "Ethan Lee",
+        "email": "ethanlee@example.com",
+        "address": "202 Birch St, Windyhill, USA"
+      },
+      "items": [
+        {
+          "productId": 18,
+          "title": "Camera Lens",
+          "quantity": 1,
+          "price": 249.99,
+          "total": 249.99
+        }
+      ],
+      "totalAmount": 249.99,
+      "status": "Paid"
+    },
+    {
+      "id": "904c",
+      "date": "2025-01-17",
+      "customer": {
+        "name": "somari ganesh",
+        "email": "somariganesh@gmail.com",
+        "address": "2-119,Nyalkal,Mugpal,Nizamabad,503230"
+      },
+      "items": [
+        {
+          "productId": "fbeeeea1-6cf2-4c08-8eb9-3a383e140da2",
+          "title": "pant",
+          "quantity": "4",
+          "price": "250",
+          "total": 1000
+        }
+      ],
+      "totalAmount": 1000,
+      "status": "Paid"
+    },
+    {
+      "id": "6ca0",
+      "date": "2025-01-17",
+      "customer": {
+        "name": "Ravi",
+        "email": "ravi@gmail.com",
+        "address": "maharashtra"
+      },
+      "items": [
+        {
+          "productId": "ce5687a4-3ad7-4abe-85c0-9001dcd6d7a4",
+          "title": "Mobile",
+          "quantity": "1",
+          "price": "17500",
+          "total": 17500
+        }
+      ],
+      "totalAmount": 17500,
+      "status": "Paid"
+    }
+  ],
+  "users": [
+    {
+      "email": "somariganesh@gmail.com",
+      "password": "$2a$10$QUatzntz/Dt/gRxo7eCGReAw4wz8vLfcY83/5FhGoR1lwacURl45q",
+      "id": 1
+    },
+    {
+      "email": "kavithakarrolla@gmail.com",
+      "password": "$2a$10$arGqgA16IlMXP5IFV9LEKuvgrLkf6SUtbldPtyDs8DE6VVUbHiB5i",
+      "id": 2
+    },
+    {
+      "email": "ravi@gmail.com",
+      "password": "$2a$10$mKWd6.ppat81rUdpZjKRuOWtCZQVun1aSeo6f2msMw70r1EG6FEjC",
+      "id": 4
+    },
+    {
+      "email": "raju@gmail.com",
+      "password": "$2a$10$WbeZ2JfpXOE7SxqfdOGt/efa/vumhlu3Kvpe2wsN5/OZD3b6KpzVC",
+      "id": 5
+    }
+  ]
+}

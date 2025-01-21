@@ -1,0 +1,24 @@
+{
+  "name": "json-server",
+  "version": "1.0.0",
+  "description": "A lightweight JSON server with authentication support for mock APIs.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "json-server --watch db.json --port 3000",
+    "test": "echo \"No tests specified\" && exit 1"
+  },
+  "keywords": [
+    "json-server",
+    "mock-api",
+    "authentication",
+    "rest-api"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.17.0",
+    "json-server-auth": "^2.1.0"
+  }
+}
