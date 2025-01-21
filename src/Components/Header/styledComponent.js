@@ -13,6 +13,7 @@ export const HeaderContainer = styled.div`
     border-bottom:1px solid black;
     box-shadow:0px 10px 3px 10px 10px black ;
     opacity:0.7;
+    z-index :2;
 
 
 `

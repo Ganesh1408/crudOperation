@@ -39,7 +39,7 @@ top:120px;
   overflow-y:scroll;
   scrollbar-width:none;
   -ms-overflow-style:none;
-  z-index :-1;
+  z-index :1;
   /* margin-bottom:200px; */
   
   

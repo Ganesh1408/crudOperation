@@ -397,6 +397,11 @@
       "email": "raju@gmail.com",
       "password": "$2a$10$WbeZ2JfpXOE7SxqfdOGt/efa/vumhlu3Kvpe2wsN5/OZD3b6KpzVC",
       "id": 5
+    },
+    {
+      "email": "kavithakarrolla1708@gmail.com",
+      "password": "$2a$10$Pn4CUVEz9MGnIcEPTEWq0.s8.VUiLvGG4hiDAIpHtnOEJ9Lg1hLa6",
+      "id": 6
     }
   ]
 }
