@@ -24,7 +24,7 @@
         }
       ],
       "totalAmount": 1998,
-      "status": "Pending",
+      "status": "Paid",
       "id": 2
     },
     {
@@ -44,7 +44,7 @@
         }
       ],
       "totalAmount": 79000,
-      "status": "Pending",
+      "status": "Paid",
       "id": 3
     }
   ],
@@ -75,7 +75,6 @@
       "id": 5
     },
     {
-<<<<<<< HEAD
       "email": "kavitha@gmail.com",
       "password": "$2a$10$v5r2DVCFOvooTKtZcvBcHORWYVOzd8IN1nKqK7BPQSdq.frfzVORO",
       "id": 6
@@ -124,11 +123,6 @@
       "email": "ravi@gmail.com",
       "password": "$2a$10$qu.Akn22SjeKtG/.Xo9cHurG.djRIMVOMU1jCjf2yp/v508jy77s.",
       "id": 15
-=======
-      "email": "kavithakarrolla1708@gmail.com",
-      "password": "$2a$10$Pn4CUVEz9MGnIcEPTEWq0.s8.VUiLvGG4hiDAIpHtnOEJ9Lg1hLa6",
-      "id": 6
->>>>>>> 9f0336bb9c6ce90fcd81fdafec3fab2b7aabb48e
     }
   ]
 }

@@ -20,7 +20,6 @@ export const GlobalStyles = createGlobalStyle`
 
     }
 
-<<<<<<< HEAD
 `;
 export const Form = styled.form`
   position: relative;
@@ -30,30 +29,6 @@ export const Form = styled.form`
   /* display:block; */
   margin-bottom: 50px;
   background-color: orange;
-=======
-`
-export const Form =styled.form`
-position:relative;
-top:120px;
-/* bottom:100px; */
-    max-width: 800px;
-    width:600px;
-    max-height:700px;
-    height:680px;
-  padding: 10px 10px 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
-  margin-left:auto;
-  margin-right:auto;
-  overflow-y:scroll;
-  scrollbar-width:none;
-  -ms-overflow-style:none;
-  z-index :1;
-  /* margin-bottom:200px; */
-  
-  
->>>>>>> 9f0336bb9c6ce90fcd81fdafec3fab2b7aabb48e
 
   /* bottom:100px; */
   /* bottom:100px; */
