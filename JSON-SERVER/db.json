@@ -24,28 +24,8 @@
         }
       ],
       "totalAmount": 1998,
-      "status": "Paid",
+      "status": "Pending",
       "id": 2
-    },
-    {
-      "date": "2025-02-03",
-      "customer": {
-        "name": "rajesh",
-        "email": "rajesh@gmail.com",
-        "address": "hyd"
-      },
-      "items": [
-        {
-          "productId": "b3fcd5c9-2b9b-45ee-b928-1b705a9cce7c",
-          "title": "tv",
-          "quantity": "1",
-          "price": "79000",
-          "total": 79000
-        }
-      ],
-      "totalAmount": 79000,
-      "status": "Paid",
-      "id": 3
     }
   ],
   "users": [
