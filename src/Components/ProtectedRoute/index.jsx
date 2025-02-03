@@ -5,7 +5,7 @@
 import Cookies from 'js-cookie'
 import { useEffect } from 'react'
 import {   useNavigate } from 'react-router-dom'
-import PropTypes from 'prop-types'; 
+import propTypes from 'prop-types'; 
 
 
 
@@ -31,8 +31,8 @@ function ProtectedRoute({children}) {
 
 }
 
-ProtectedRoute.PropTypesropTypes = {
-    children: PropTypes.node.isRequired, 
+ProtectedRoute.propTypes = {
+    children: propTypes.node.isRequired, 
 };
 
 
