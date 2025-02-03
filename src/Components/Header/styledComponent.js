@@ -13,7 +13,11 @@ export const HeaderContainer = styled.div`
     border-bottom:1px solid black;
     box-shadow:0px 10px 3px 10px 10px black ;
     opacity:0.7;
+<<<<<<< HEAD
     z-index:2;
+=======
+    z-index :2;
+>>>>>>> 9f0336bb9c6ce90fcd81fdafec3fab2b7aabb48e
 
 
 `
