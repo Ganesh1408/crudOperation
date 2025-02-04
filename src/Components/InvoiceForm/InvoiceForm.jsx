@@ -54,16 +54,24 @@ function InvoiceForm() {
     const total = items.reduce((acc, item) => acc + item.total, 0);
     setTotalAmount(total);
   };
-const {data}=useGetInvoicesQuery()
-console.log(data)
-  const [PostInvoices] = usePostInvoicesMutation();
+const {data:invoices}=useGetInvoicesQuery()
+// console.log(invoices)
+  const [PostInvoices,{isError}] = usePostInvoicesMutation();
+  // console.log(isError)
+  
   const [UpdateInvoice]=useUpdateInvoiceMutation()
   
+  const  getNextInvoiceId = () => {
+    if (!invoices || invoices.length === 0) return "INV-1000";
+    const lastInvoice = invoices[invoices.length - 1]; 
+    const lastId = parseInt(lastInvoice.id.split("-")[1], 10); 
+    return `INV-${lastId + 1}`; 
+  };
 
   useEffect(() => {
     if (selectedInvoiceId) {
-      console.log(selectedInvoiceId)
-      const selectedInvoice = data.find((inv) => inv.id === Number(selectedInvoiceId));
+      // console.log(selectedInvoiceId)
+      const selectedInvoice = invoices.find((inv) => inv.id === (selectedInvoiceId));
       console.log(selectedInvoice)
       if (selectedInvoice) {
         setDate(selectedInvoice.date);
@@ -80,13 +88,14 @@ console.log(data)
       setTotalAmount(0);
       setStatus("Pending");
     }
-  }, [selectedInvoiceId, data]);
+  }, [selectedInvoiceId, invoices]);
 
 
   const onSubmit = async (e) => {
     e.preventDefault();
 
     const invoiceData = {
+      
       date,
       customer,
       items,
@@ -97,11 +106,16 @@ console.log(data)
     try {
       if (selectedInvoiceId) {
         // Update the existing invoice
+
+        //  getNextInvoiceId(),  
         await UpdateInvoice({ id: selectedInvoiceId, ...invoiceData });
+        
         alert("Invoice updated successfully!");
       } else {
+        
+
         // Create a new invoice
-        await PostInvoices(invoiceData);
+        await PostInvoices({id: getNextInvoiceId(),  ...invoiceData});
         alert("New invoice created successfully!");
       }
     } catch (error) {
@@ -127,8 +141,9 @@ console.log(data)
             onChange={(e) => setSelectedInvoiceId(e.target.value)}
           >
             <option value="">Create New Invoice</option>
-            {data?.map((inv) => (
+            {invoices?.map((inv) => (
               <option key={inv.id} value={inv.id}>
+                
                 {inv.id}-{inv.customer.name}
               </option>
             ))}

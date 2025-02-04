@@ -16,7 +16,7 @@ export const api = createApi({
             method:"POST",
             body:invoiceData,
         }),
-        invalidateTags:["invoices"],
+        invalidatesTags:["invoices"],
         async onQueryStarted(invoiceData,{dispatch,queryFulfilled}){
 
             const patchResult = dispatch(
@@ -69,7 +69,7 @@ export const api = createApi({
             body:id,
         }),
         invalidatesTags:["invoices"],
-        async onQueryStarted({id},{dispatch,queryFulfilled}){
+        async onQueryStarted(id,{dispatch,queryFulfilled}){
 
             const patchResult = dispatch(
                 api.util.updateQueryData("getInvoices" , id, (draft)=>{

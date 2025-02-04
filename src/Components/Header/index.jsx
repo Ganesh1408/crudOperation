@@ -17,7 +17,7 @@ function Header() {
       <div>
         <Link
           style={{
-            paddingRight: "20px",
+            paddingLeft: "20px",
             textDecoration: "none",
             color: "black",
           }}

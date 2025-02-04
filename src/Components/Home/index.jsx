@@ -11,14 +11,18 @@ import {
   StatusHeading,
 } from "./styledComponent";
 import Header from "../Header";
-import { useDeleteInvoiceMutation, useGetInvoicesQuery, useUpdateInvoiceMutation } from "../../store/api";
+import {
+  useDeleteInvoiceMutation,
+  useGetInvoicesQuery,
+  useUpdateInvoiceMutation,
+} from "../../store/api";
 
 function Home() {
   const { data, isLoading } = useGetInvoicesQuery();
-  console.log(data)
+  // console.log(data)
 
   const [DeleteInvoice] = useDeleteInvoiceMutation();
-  const [UpdateInvoice]=useUpdateInvoiceMutation()
+  const [UpdateInvoice] = useUpdateInvoiceMutation();
 
   // handleUpdateStatus(eachItem.id, e.target.value)
 
@@ -51,7 +55,7 @@ function Home() {
                     cursor: "pointer",
                   }}
                   onClick={async (e) => {
-                    e.stopPropagation()
+                    e.stopPropagation();
                     try {
                       await DeleteInvoice(eachItem.id);
                     } catch (e) {
@@ -72,33 +76,40 @@ function Home() {
                 <CustomerContainer>
                   <div>
                     <CustomerHeading>
-                      name : {eachItem.customer.name}{" "}
+                      name : {eachItem.customer.name}
                     </CustomerHeading>
                     <CustomerHeading>
-                      E-mail :{eachItem.customer.email}{" "}
+                      E-mail :{eachItem.customer.email}
                     </CustomerHeading>
                     <CustomerHeading>
-                      address : {eachItem.customer.address}{" "}
+                      address : {eachItem.customer.address}
                     </CustomerHeading>
                   </div>
                   <div>
-                    <StatusHeading >Status: <Status status={eachItem.status}> {String(eachItem.status)}</Status></StatusHeading>
-                    
+                    <StatusHeading>
+                      Status:{" "}
+                      <Status status={eachItem.status}>
+                        {" "}
+                        {String(eachItem.status)}
+                      </Status>
+                    </StatusHeading>
+
                     <select
                       style={{ width: "100px" }}
                       value={eachItem.status}
-                      onChange={async(e) =>{
-                        try{
-                        await UpdateInvoice({id:eachItem.id, status:e.target.value})
-                      }catch(e){
-                        console.log(e)
-                      }
+                      onChange={async (e) => {
+                        try {
+                          await UpdateInvoice({
+                            id: eachItem.id,
+                            status: e.target.value,
+                          });
+                        } catch (e) {
+                          console.log(e);
+                        }
                       }}
                     >
-                      
-                        <option value="Pending">Pending</option>
-                        <option value="Paid">Paid</option>
-                      
+                      <option value="Pending">Pending</option>
+                      <option value="Paid">Paid</option>
                     </select>
                   </div>
                 </CustomerContainer>
@@ -134,12 +145,10 @@ function Home() {
                         <td>{product.price}</td>
                         <td>{product.quantity * product.price}</td>
                       </tr>
-                      
-                      
                     ))}
-                    <tr >
+                    <tr>
                       <td colSpan="4">Grand Total </td>
-                      
+
                       <td>{eachItem.totalAmount}</td>
                     </tr>
                   </tbody>
@@ -148,7 +157,16 @@ function Home() {
             );
           })
         ) : (
-          <div style={{position:"relative",top:"350px", left:"650px", fontSize:"24px"}}>No Invoices Available</div>
+          <div
+            style={{
+              position: "relative",
+              top: "350px",
+              left: "650px",
+              fontSize: "24px",
+            }}
+          >
+            No Invoices Available
+          </div>
         )}
       </div>
     </>

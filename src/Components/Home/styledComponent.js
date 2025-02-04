@@ -77,6 +77,7 @@ export const CustomerContainer = styled.div`
     font-size:20px;
     display:flex;
     justify-content:space-between;
+    
     /* align-items:center; */
 
 `
@@ -84,6 +85,8 @@ export const CustomerHeading = styled.h2`
     font-size:18px;
     color:#222;
     font-weight:700;
+    /* max-width:180px; */
+    /* overflow:hidden; */
 `
 
 export const StatusHeading= styled.h3`
