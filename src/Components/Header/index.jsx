@@ -2,14 +2,24 @@
 // import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { HeaderContainer, HeaderOptions } from "./styledComponent";
+import {signOut} from 'firebase/auth'
+import {auth} from '../FirebaseConfig'
+
+
 import Cookies from "js-cookie";
+
 
 function Header() {
   const navigate = useNavigate();
 
-  const Logout = () => {
-    Cookies.remove("accessToken");
-    navigate("/login");
+
+  const Logout = async() => {
+    await signOut(auth)
+    
+      Cookies.remove("accessToken");
+      navigate("/login");
+    
+    
   };
 
   return (
@@ -58,7 +68,7 @@ function Header() {
             border:'none'
           }}
         >
-          <a onClick={Logout}> Logout</a>
+          <a role="button" onClick={Logout}> Logout</a>
         </button>
       </HeaderOptions>
     </HeaderContainer>

@@ -15,6 +15,12 @@ import { Buttonspan } from "./styledComponents";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
+import {auth ,provider} from '../FirebaseConfig'
+
+import { getRedirectResult,  signInWithPopup,  } from "firebase/auth";
+
+
+
 function Login() {
   const navigate = useNavigate();
 
@@ -40,7 +46,11 @@ function Login() {
   useEffect(() => {
     fetchUsers();
     setSignup(false);
+
+    // Handle Google Redirect Login
+   
   }, []);
+
 
   const fetchUsers = async () => {
     const Url1 = "http://localhost:3000/users";
@@ -139,7 +149,7 @@ function Login() {
 
   const onSubmitSuccess = (accessToken) => {
     Cookies.set("accessToken", accessToken, { expires: 30 });
-    navigate("/Home"); // Navigate to the homepage
+    navigate("/home", {replace:true}); // Navigate to the homepage
   };
 
   const handleSubmit = async (e) => {
@@ -175,11 +185,29 @@ function Login() {
     }
   };
 
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+  
+      if (result.user) {
+        console.log("Google Login Successful:", result.user);
+        onSubmitSuccess(result.user.accessToken); // This navigates to /home
+      }
+    } catch (error) {
+      console.error("Google Login Error:", error.message);
+      setError(error.message);
+    }
+  };
+  
+
+
+  
+
   return (
     <>
       <GlobalStyles />
       {Login ? (
-        <LoginContainer onSubmit={handleSubmit} height="400px">
+        <LoginContainer onSubmit={handleSubmit} height="440px">
           <AccountCircle sx={{ fontSize: "120px", color: "dodgerblue" }} />
           <InputContainer>
             <Person2Icon
@@ -257,10 +285,13 @@ function Login() {
             </span>
           </InputContainer>
           <Button type="submit">Login</Button>
+          <Button onClick={handleGoogleLogin}>Sign in with Google</Button>
           <Buttonspan role="button" onClick={() => setLogin((prev) => !prev)}>
             Don&apos;t have an account? Signup
           </Buttonspan>
+          
           {err && <p style={{ color: "red" }}>{err}</p>}
+
         </LoginContainer>
       ) : (
         <LoginContainer onSubmit={submit} height="540px">
